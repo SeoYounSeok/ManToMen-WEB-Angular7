@@ -1,0 +1,23 @@
+<!-- Shift + Alt + F 자동포맷 -->
+<!-- 값을 가져오도록 하는 것입니다.-->
+<div class="cont-search">
+  <button routerLink="/contents">전체보기</button>
+</div>
+
+
+<div class="contents">
+  <div class="container text-center">
+    <div class="row">
+      <div *ngFor="let class of searchcate; let i = index" (click)="onSelected(class.ClassName)">
+        <div class="col-sm-4">
+          <img [src]="class.ClassPicture" class="img-responsive" style="width:100%" alt="Image">
+          <p style="text-align: left; font-size: 12px; color:gray;"><u>{{class.ClassCategory}}</u></p>
+          <h5>{{class.ClassName}}</h5>
+          <!-- ClassCurrentPeople 은 입력해주지 않았고, Mongodb 에서 가져오는 값. 되는지 확인! -->
+          <p> <span>모집 인원: &nbsp;</span><span>{{class.ClassTotalPeople}}</span>
+            <span style="margin-left:15px">수강료: &nbsp;</span><span>{{class.ClassPrice}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<!-- Shift + Alt + F 자동포맷 -->
+<!-- 값을 가져오도록 하는 것입니다.-->
+<div class="contents">
+  <div *ngFor="let myclass of mypartinformation let i = index">
+    <p style="text-align: left; font-size: 14px; color:gray"><u>{{myclass.ClassCategory}}</u></p>
+    <img [src]="myclass.ClassPicture" class="img-responsive" alt="Image" width="500" height="300">
+    <br>
+    <h3>{{myclass.ClassName}}</h3><br>
+    <!-- ClassCurrentPeople 은 입력해주지 않았고, Mongodb 에서 가져오는 값. 되는지 확인! -->
+    <h4>튜터 정보</h4><br>
+    <pre>
+    <h5>{{myclass.ClassTutorIntro}}</h5>
+    </pre>
+    <br><br>
+    <h4>수업 소개</h4><br>
+    <pre>
+    <h5>{{myclass.ClassIntro}}</h5>
+    </pre>
+    <br><br>
+    <h4>요약</h4><br>
+    <p> <span>장소: &nbsp;</span><span>{{myclass.ClassPlace}}</span></p>
+
+    <p> <span>수업 시간: &nbsp;</span><span>{{myclass.ClassTime}}</span>
+      <span style="margin-left:30px">수업 요일: &nbsp;</span><span>{{myclass.ClassWeek}}</span></p>
+
+    <p> <span>수업 횟수: &nbsp;</span><span>{{myclass.ClassNumberOfTime}}</span>
+      <span style="margin-left:30px">회당 수업시간&nbsp;</span><span>{{myclass.ClassHour}}</span></p>
+
+    <p> <span>시작 날짜: &nbsp;</span><span>{{myclass.ClassFirstTime}}</span>
+      <span style="margin-left:30px">모집 인원: &nbsp;</span><span>{{myclass.ClassTotalPeople}}</span></p>
+
+
+    <p> <span>수강료: &nbsp;</span><span>{{myclass.ClassPrice}}</span></p>
+    <br><br>
+    <h4>튜티 아이디 목록</h4><br>
+    <h5>{{myclass.ClassTuteeID}}</h5>
+    <br><br><br><br>
+
+    <!--
+    <button class="btn_want"></button>
+    -->
+    <button class="btn_review" routerLink="/mypage">돌아가기</button>
+
+    <hr>
+  </div>
+</div>

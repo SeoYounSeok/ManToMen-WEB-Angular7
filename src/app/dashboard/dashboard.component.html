@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+</head>
+
+<body>
+  <div class="item_active">
+    <div class="hello-content">
+      <br>
+      <h1 style="font-size:50px; text-align:center; color:#ffffff; font-family: 새굴림; ">수업을 등록하세요.</h1>
+      <h5 style="font-size:18px; text-align:center; color:#ffffff; font-family: sans-serif; ">수업제목, 카테고리, 사진 등</h5>
+      <br>
+    </div>
+  </div>
+  <br /><br />
+  <div class="container" (submit)="Addclasses($event)">
+    <form>
+        <div class="step-state step2">
+            <ul>
+                <li><p>튜터 등록</p></li>
+                <li><p>강의 제목</p></li>
+                <li><p>강의 설명</p></li>
+                <li><p>가격 설정</p></li>
+                <li><p>장소 설정</p></li>
+            </ul>
+        </div>
+      <br />
+      <label for="fname">수업 제목</label>
+      <input type="text" placeholder="수업 제목을 입력하세요" id="ClassName" required>
+
+      <br />
+      <label for="fname">카테고리</label>
+      <select id="ClassCategory" name="ClassCategory">
+        <option name="ClassCategory" id="programming" value="programming">프로그래밍</option>
+        <option name="ClassCategory" id="design" value="design">디자인</option>
+        <option name="ClassCategory" id="language" value="language">외국어</option>
+        <option name="ClassCategory" id="music" value="music">음악</option>
+        <option name="ClassCategory" id="beauty" value="beauty">뷰티</option>
+        <option name="ClassCategory" id="etc" value="etc">기타</option>
+      </select>
+
+      <br />
+      <label for="fname">모집 인원</label>
+      <input type="text" placeholder="회원 수를 설정해주세요" id="ClassTotalPeople" required>
+      <br />
+      <label for="fname">강의 사진</label>
+      <br />
+      <iframe src="#" name="iframe" style="width:1px; height:1px; border:0; visibility:hidden;"></iframe>
+      <form id="uploadForm" enctype="multipart/form-data" action="/class/upload" method="post" target="iframe">
+        <input type="file" id="file" name="file" multiple required /><br/>
+        <input type="submit" value="Upload Image" name="submit">
+      </form>
+      <br /><br />
+
+      <div class="step-state step3">
+          <ul>
+              <li><p>튜터 등록</p></li>
+              <li><p>강의 제목</p></li>
+              <li><p>강의 설명</p></li>
+              <li><p>가격 설정</p></li>
+              <li><p>장소 설정</p></li>
+          </ul>
+      </div>
+      <br /><br />
+      <label for="fname">튜터 소개</label>
+      <textarea id="ClassTutorIntro" placeholder="예) 한성대학교 웹 & 앱 프로젝트  " style="height:100px" required></textarea>
+
+      <br />
+      <label for="fname">수업 소개</label>
+      <textarea id="ClassIntro" placeholder="예) 한성대학교 웹 & 앱 프로젝트  " style="height:100px" required></textarea>
+
+      <br />
+      <label for="fname">수업 대상</label>
+      <textarea id="ClassWhom" placeholder="예) 8주차 : Angular 수업 및 과정 설명 " style="height:100px" required></textarea>
+
+      <br />
+      <label for="fname">수업 내용(커리큘럼)</label>
+      <textarea id="ClassContents" placeholder=" 예) 8주차 : Angular 수업 및 과정 설명 " style="height:100px" required></textarea>
+      <br />
+      <div class="step-state step4">
+          <ul>
+              <li><p>튜터 등록</p></li>
+              <li><p>강의 제목</p></li>
+              <li><p>강의 설명</p></li>
+              <li><p>가격 설정</p></li>
+              <li><p>장소 설정</p></li>
+          </ul>
+      </div>
+
+      <br />
+      <label for="fname">수강료</label>
+      <input type="text" placeholder="수강료를 입력하세요" id="ClassPrice" required>
+      <br />
+      <label for="fname">회당 수업시간</label>
+      <input type="text" placeholder="회당 수업시간을 입력해주세요." id="ClassHour" required>
+      <br />
+      <label for="fname">수업 횟수</label>
+      <input type="text" placeholder="총 수업 횟수를 입력해주세요" id="ClassNumberOfTime" required>
+      <br />
+      <div class="step-state step5">
+          <ul>
+              <li><p>튜터 등록</p></li>
+              <li><p>강의 제목</p></li>
+              <li><p>강의 설명</p></li>
+              <li><p>가격 설정</p></li>
+              <li><p>장소 설정</p></li>
+          </ul>
+      </div>
+      <br />
+      <label for="fname">장 소</label>
+      <select id="ClassPlace" name="ClassPlace">
+        <option name="ClassPlace" id="seoul" value="서울">서울</option>
+        <option name="ClassPlace" id="busan" value="부산">부산</option>
+        <option name="ClassPlace" id="suwon" value="수원">수원</option>
+        <option name="ClassPlace" id="Jeonju" value="전주">전주</option>
+      </select>
+      <br />
+      <label for="fname">상세 위치</label>
+      <input type="text" placeholder="상세 위치를 입력해주세요" id="ClassPlaceDetail" required>
+      <br />
+      <label for="fname">수업 요일</label>
+      <br /> <br />
+      <div class="check_day">
+        <input type="checkbox" name="ClassWeek" id="monday" value="월">
+        <label for="monday">월 &nbsp;&nbsp;&nbsp;</label>
+        <input type="checkbox" name="ClassWeek" id="tuesday" value="화">
+        <label for="tuesday">화 &nbsp;&nbsp;&nbsp;</label>
+        <input type="checkbox" name="ClassWeek" id="wednesday" value="수">
+        <label for="wednesday">수 &nbsp;&nbsp;&nbsp;</label>
+        <input type="checkbox" name="ClassWeek" id="thursday" value="목">
+        <label for="thursday">목 &nbsp;&nbsp;&nbsp;</label>
+        <input type="checkbox" name="ClassWeek" id="friday" value="금">
+        <label for="friday">금 &nbsp;&nbsp;&nbsp;</label>
+        <input type="checkbox" name="ClassWeek" id="saturday" value="토">
+        <label for="saturday">토 &nbsp;&nbsp;&nbsp;</label>
+        <input type="checkbox" name="ClassWeek" id="sunday" value="일">
+        <label for="sunday">일 &nbsp;</label>
+      </div>
+      <br /><br />
+      <label for="fname">수업 시간</label>
+      <input type="text" placeholder="수업 시간을 입력해주세요" id="ClassTime" required>
+      <br />
+      <label for="fname">시작 날짜</label>
+      <br />
+      <input type="date" id="ClassFirstTime" required>
+      <br /><br />
+      <div class="sub_cen">
+      <input type="submit" value="신청하기">
+      </div>
+    </form>
+  </div>
+</body>
+
+<script>
+  $(document).ready(function () {
+    $('#uploadForm').submit(function () {
+      $(this).ajaxSubmit({
+        error: function (xhr) {
+          status('Error: ' + xhr.status);
+        },
+        success: function (response) {
+          console.log(response);
+        }
+      });
+      return false;
+    });
+
+  });
+
+    //Auto file upload practice !! Don't move this...
+    //$('#file').change(function(){
+    //$('#uploadForm').submit();
+    //});
+</script>
+
+</html>

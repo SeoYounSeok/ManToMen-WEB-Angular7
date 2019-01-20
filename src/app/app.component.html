@@ -1,0 +1,63 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+<style>
+
+</style>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="/" style="color:#FF9393">MAN TO MEN</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a routerLink="/introduce">서비스소개</a></li>
+          <li><a routerLink="/addtutor">튜터 등록</a></li>
+          <li id="mregister"><a routerLink="/register">회원가입</a></li>
+          <li id="mmypage"><a routerLink="/mypage">Mypage</a></li>
+          <li><a routerLink="/contents">콘텐츠</a></li>
+          <li><a routerLink="/chatbot">도움말</a></li>
+          <!-- 관리자 홈페이지 3개 였던 것을 1개로 통합시켜 놓았습니다 조금 더 간결화하기 위해서-->
+          <li id="puseradmin"><a routerLink="/useradmin">관리자 전용</a></li>
+          <li id="ptutoradmin"><a routerLink="/tutoradmin">튜터 관리</a></li>
+          <li id="pclassadmin"><a routerLink="/classadmin">클래스 관리</a></li>
+          <!-- 메인 페이지 표현 방식 : class="active"  -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          <li>
+            <form class="example" (submit)="Searchinfo($event)">
+              <span><input type="text" id="userSearch" name="search">
+                <button type="submit">
+                  <i class="fa fa-search"></i>
+                </button></span>
+            </form>
+          </li>
+
+          <li id="mlogin"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+          <li id="mlogout"><a (click)="onLogoutClick()"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <button id="myBtn" (click)="topFunction()"><i class="fas fa-angle-double-up"></i></button>
+</body>
+<router-outlet></router-outlet>
+<footer class="container-fluid text-center">
+  <p> (주)MTOM | 주소 : 서울특별시 성북구 삼선교로 16길 116, 한성대학교 | 대표자명 : MTOM</p>
+  <p> Copyright ⓒ2018 taling inc, ltd. All rights reserved</p>
+</footer>

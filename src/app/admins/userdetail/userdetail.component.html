@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <br />
+
+    <form (submit)="ChangePoint($event)" class="point-page">
+  
+        <p class="a"><i class="fas fa-credit-card" style="color:green;"></i>&nbsp; &nbsp;<span>포인트 변경</span></p>
+      <br />
+      <textarea id= "PointContents" placeholder="변경하실 포인트를 입력하세요 " style="width:280px; height:50px" required></textarea>
+  
+      <br /><br />
+  
+      <button type="submit">변경하기</button>
+      <button class="button2" routerLink="/useradmin" onclick="alert('포인트 변경을 취소하셨습니다.');">취소하기</button>
+      <br /><br />
+    </form>
+</body>
+
+</html>

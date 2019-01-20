@@ -1,0 +1,29 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('http://fonts.googleapis.com/earlyaccess/hanna.css');
+* {
+  font-family: 'Hanna', serif;
+  user-select: none;
+}
+.helper{
+    text-align: center;
+    border:none;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    position: relative;
+    left:0;
+    right: 0;
+}
+.chatbot{
+    font-size: 250px;
+    cursor: pointer;    
+    color: #819FF7;
+}
+
+.mailhelp{
+    cursor: pointer;
+    font-size: 220px;
+    margin-left:120px;
+    color: #FFAAAA;
+}

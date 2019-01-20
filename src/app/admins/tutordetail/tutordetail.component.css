@@ -1,0 +1,128 @@
+
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('http://fonts.googleapis.com/earlyaccess/hanna.css');
+* {
+  box-sizing: border-box;
+  font-family: 'Hanna', serif;
+  user-select: none;
+}
+
+pre{
+    padding: 0;
+    background: white;
+    border: none;
+    text-align: center;
+}
+
+
+#apply {
+    font-size: 30px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background-color:white;
+    color: black;
+    margin-top: 20px;
+}
+#subapplay{
+    font-size:10px;
+    color:red;
+
+}
+
+label{
+    font-size:18px;
+    text-decoration: underline; 
+    color:#0056b3;
+}
+
+
+.container {
+    position: relative;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    margin-top:30px;
+    margin-bottom: 100px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+input[type=text], select, textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #FFAAAA;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #FFAAAA;
+}
+
+input[type=date] {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+  
+.btn_deny {
+
+    font-weight: bold;
+    color:white;
+    font-style: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-left:18px;
+    width:100px;
+    background-color: #ff4949;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+  
+.btn_accept {
+
+    font-weight: bold;
+    color:white;
+    font-style: bold;
+    text-decoration: none;
+    display: inline-block;
+    width:100px;
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}

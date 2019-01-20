@@ -1,0 +1,64 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  user-select: none;
+}
+
+
+.tutor-page{
+    margin:auto;
+    width:60%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    width: 500px;
+    text-align: center;
+}
+.a {
+    font-size: 40px;
+    color: #819FF7;
+    font-weight: bold;
+  }
+
+  
+.a2 {
+    font-size: 40px;
+    color:#819FF7;
+    font-weight: bold;
+  }
+
+  .a3 {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .tutor-form input{
+
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    color:black;
+    width: 50%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+ .tutor-form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background:  #819FF7;
+    width: 28%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }

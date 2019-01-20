@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <div id="customer_menu">
+            <ul class="nav navbar-nav">
+                <li id="puseradmin"><a routerLink="/useradmin">사용자 관리</a></li>
+                <li id="ptutoradmin"><a routerLink="/tutoradmin" style="color:#0056b3;">튜터 관리</a></li>
+                <li id="ptutoradmin"><a routerLink="/classadmin">클래스 관리</a></li>
+            </ul>
+            <br /> <br />
+        </div>
+    </div>
+
+    <div class="customers">
+
+        <div id="customers_icon">
+            <p>&nbsp;<i class="fas fa-home"></i>&nbsp;&nbsp;
+                <span>튜터 승락/거절</span>
+            </p>
+        </div>
+        <div id="customer_table">
+            <p id="customer_p">&nbsp; <i class="fas fa-list"></i>&nbsp;&nbsp;
+                <span>대기 목록</span>
+                <span style="font-size:12px; color: red; ">&nbsp;ver.2018</span>
+            </p>
+            <table class="table" id="customers">
+                <tr>
+                    <th>Category</th>
+                    <th>UserID</th>
+                    <th>ClassName</th>
+                </tr>
+                <tr *ngFor="let addtuclass of addtutors; let i = index" (click)="onDetail(addtuclass.ClassTutorID,addtuclass.ClassName)">
+                    <td>{{addtuclass.ClassCategory}}</td>
+                    <td>{{addtuclass.ClassTutorID}}</td>
+                    <td>{{addtuclass.ClassName}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

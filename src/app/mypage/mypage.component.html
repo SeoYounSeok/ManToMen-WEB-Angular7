@@ -1,0 +1,115 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="item_active">
+        <div class="hello-content">
+          <br>
+          <h1 style="font-size:50px; text-align:center; color:#ffffff; font-family: 새굴림; " >정보를 입력하세요</h1>
+          <h4 style="font-size:25px; text-align:center; color:#ffffff; font-family: 새굴림; ">프로필 수정</h4>
+          <br>
+        </div>
+      </div>
+  <div class="login-page">
+    <div class="form">
+      <form (submit)="MypageUser($event)" class="login-form">
+        <div class="container">
+            <table>
+                <tr *ngFor="let post of posts">
+                    <td rowspan="2" class="mypage_img" (click)="oneditimage()">  
+                      <img [src]="post.userPicture" class="userpictures" />
+                    </td>
+                    <td style="font-size:32px;">{{post.userID}}&nbsp;<i class="fas fa-pen"></i></td>
+                </tr>
+                <tr *ngFor="let post of posts">
+                    <td style="font-size:25px;"><i class="fas fa-credit-card" style="color:green;"></i>&nbsp; {{post.userPoint}}</td> 
+                </tr>
+               </table>
+          <br>
+          <div id="editimage">
+            <p>- 프로필 사진을 변경하시겠습니까? -</p>
+            <div style='display: inline;'>
+              <iframe src="#" name="iframe" style="width:1px; height:1px; border:0; visibility:hidden;"></iframe>
+              <form class="upload" id="uploadForm" enctype="multipart/form-data" action="/index/upload" method="post"
+                target="iframe">
+                <input type="file" id="file" name="file" multiple required />
+                <input id=Uploadsubmit type="submit" value="Upload Image" name="submit">
+              </form>
+            </div>
+          </div>
+          <br />
+          <p>- 변경하실 비밀번호를 입력하세요 -</p>
+          <input type="password" placeholder="비밀번호를 입력해주세요" id="userPassword" required>
+          <br>
+          <p>- 등록하신 이메일입니다 -</p>
+          <div *ngFor="let post of posts">
+            <h4>{{post.userEmail}}</h4>
+          </div>
+          <br>
+          <p>- 등록하신 성함입니다 -</p>
+          <div *ngFor="let post of posts">
+            <h4>{{post.userName}}</h4>
+          </div>
+          <br>
+          <p>- 변경하실 나이를 입력하세요 -</p>
+          <input type="number" placeholder="나이를 입력하세요" id="userAge" required>
+          <br>
+          <p>- 변경하실 성별을 입력해주세요. -</p>
+              <input type="radio" name="test" value="남자" id="first" />
+              <label for="first">남자</label>
+              <input type="radio" name="test" value="여자" id="second">
+              <label for="second">여자</label>
+          <p>- 변경하실 관심 분야를 선택해주세요 (다중 선택) -</p>
+          <input type="checkbox" name="userCategory" id="programming" value="programming">
+          <label for="programming">프로그래밍</label>
+          <input type="checkbox" name="userCategory" id="design" value="design">
+          <label for="design">디자인</label>
+          <input type="checkbox" name="userCategory" id="language" value="language">
+          <label for="language">외국어</label>
+          <input type="checkbox" name="userCategory" id="music" value="music">
+          <label for="music">음악</label>
+          <input type="checkbox" name="userCategory" id="beauty" value="beauty">
+          <label for="beauty">뷰티</label>
+          <input type="checkbox" name="userCategory" id="etc" value="etc">
+          <label for="etc">기타</label>
+          <br><br />
+          <button class="button4" routerLink="/mypageclass"><b>운영 클래스</b></button>
+          <button class="button5" routerLink="/mypagepart"><b>수강 클래스</b></button>
+          <button type="submit">정보 수정</button>
+          <button class="button3" (click)="onDelete()"><b>회원 탈퇴</b></button>
+          <p class="message">튜터를 하고 싶으신가요? <a routerLink="/addtutor"> 튜터등록 </a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script>
+  $(document).ready(function () {
+    $('#uploadForm').submit(function () {
+      $(this).ajaxSubmit({
+        error: function (xhr) {
+          status('Error: ' + xhr.status);
+        },
+        success: function (response) {
+          console.log(response);
+          alert("Upload Complete");
+        }
+      });
+      return false;
+    });
+
+  });
+
+</script>
+
+</html>

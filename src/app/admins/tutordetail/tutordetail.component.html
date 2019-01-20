@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Shift + Alt + F 자동포맷 -->
+  <!-- 값을 가져오도록 하는 것입니다.-->
+  <div class="container">
+    <form (submit)="AcceptTutor($event)">
+      <div class="row">
+        <div *ngFor="let class of informationss">
+          <p id="apply"><span id="a"><i class="far fa-envelope"></i>&nbsp;</span>승인 대기</p>
+          <p id="subapplay">* 승인이 완료되면 자동으로 삭제됩니다.</p>
+          <hr >
+          <br /> <br />
+          <label for="fname">수업 제목</label>
+          <br /> <br />
+          <p>{{class.ClassName}}</p>
+          <br />
+          <label for="fname">카테고리</label>
+          <br /><br />
+          <p>{{class.ClassCategory}}</p>
+          <br />
+          <label for="fname">모집 인원</label>
+          <br /><br />
+          <p>{{class.ClassTotalPeople}}</p>
+          <br />
+          <label for="fname">튜터 소개</label>
+          <br /><br />
+          <pre>
+          <p>{{class.ClassTutorIntro}}</p>
+          <br />
+          </pre>
+          <label for="fname">수업 소개</label>
+          <br /><br />
+          <pre>   
+          <p>{{class.ClassIntro}}</p>
+          </pre>   
+          <br />
+          <label for="fname">수업 대상</label>
+          <br /><br />
+          <p>{{class.ClassWhom}}</p>
+
+          <br />
+          <label for="fname">수업 내용(커리큘럼)</label>
+          <br /><br />
+          <pre>          
+            <p>{{class.ClassContents}}</p>
+          </pre>
+          <br />
+          <label for="fname">수강료</label>
+          <br /><br />
+          <p>{{class.ClassPrice}}</p>
+          <br />
+          <label for="fname">회당 수업시간</label>
+          <br /><br />
+          <p>{{class.ClassHour}}</p>
+          <br />
+          <label for="fname">수업 횟수</label>
+          <br /><br />
+          <p>{{class.ClassNumberOfTime}}</p>
+          <br />
+          <label for="fname">장 소</label>
+          <br /><br />
+          <p>{{class.ClassPlace}}</p>
+          <br />
+          <label for="fname">상세 위치</label>
+          <br /><br />
+          <p>{{class.ClassPlaceDetail}}</p>
+          <br />
+          <label for="fname">수업 요일</label>
+          <br /><br />
+          <p>{{class.ClassWeek}}</p>
+          <br />
+          <label for="fname">수업 시간</label>
+          <br /><br />
+          <p>{{class.ClassTime}}</p>
+          <br />
+          <label for="fname">시작 날짜</label>
+          <br /><br />
+          <p>{{class.ClassFirstTime}}</p>
+          <br />
+          <button type="submit" class="btn_accept"> 수락 하기</button>
+
+          <span (click)=DenyTutor($event);>
+            <button class="btn_deny">거절 하기</button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+</body>
+
+</html>

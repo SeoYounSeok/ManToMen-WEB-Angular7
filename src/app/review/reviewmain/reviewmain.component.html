@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="review-page">
+    <button routerLink="/addreview">리뷰 쓰기</button>
+    <div *ngFor="let infors of informations; let i = index">
+      <p class="a"><i class="fa fa-heart">&nbsp;&nbsp;</i><span class="a2">평점</span> &nbsp; <span class="a2">{{infors.ClassScore}}</span><span class="a2">점</span>
+      </p>
+    </div>
+    <hr>
+    <div *ngFor="let reviewmain of reviews; let i = index">
+      <span>{{reviewmain.ReviewuserID}}</span>&nbsp;&nbsp;<span>{{reviewmain.ReviewDate}}</span>
+      &nbsp;&nbsp;
+      <span class="b" (click)="onReport(reviewmain.ReviewuserID, reviewmain.ReviewClassName)" style="cursor: pointer;">
+        <i class="fas fa-flag"></i>&nbsp;&nbsp;<span>신고하기</span>
+      </span>
+      <h5>{{reviewmain.ReviewContents}}</h5>
+      <hr>
+    </div>
+  </div>
+</body>
+
+</html>

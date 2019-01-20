@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+
+  <br />
+
+  <form (submit)="AddReviews($event)" class="review-page">
+
+      <p class="a"><i class="far fa-sticky-note"></i>&nbsp;&nbsp;<span>리뷰 쓰기</span></p>
+    <br />
+    <textarea id= "ReviewContents" placeholder="예) 친절한 설명이 정말 도움이 많이 되었습니다 :D " style="height:50px" required></textarea>
+
+    <input type="radio" name="test" value="1" id="first" />
+    <label for="first">1 점</label>
+    <input type="radio" name="test" value="2" id="second">
+    <label for="second">2 점</label>
+    <input type="radio" name="test" value="3" id="three" />
+    <label for="three">3 점</label>
+    <input type="radio" name="test" value="4" id="four">
+    <label for="four">4 점</label>
+    <input type="radio" name="test" value="5" id="five">
+    <label for="five">5 점</label>
+
+    <br /><br />
+
+    <button type="submit">작성하기</button>
+    <button class="button2" routerLink="/reviewmain" onclick="alert('리뷰 등록을 취소하셨습니다.');">취소하기</button>
+    <br /><br />
+  </form>
+</body>
+
+</html>

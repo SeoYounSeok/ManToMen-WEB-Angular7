@@ -1,0 +1,107 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('http://fonts.googleapis.com/earlyaccess/hanna.css');
+* {
+  font-family: 'Hanna', serif;
+  user-select: none;
+}
+.addtutor{
+    border:none;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    position: relative;
+    left:0;
+    right: 0;
+}
+.innertutor{
+    text-align:center;
+    left:0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    border:none;
+}
+button {
+    margin: 0 auto;
+    padding:8px 16px;
+    width: 300px;
+    height: 330px;
+    font-size: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    border:4px solid #819FF7;
+    background: linear-gradient(45deg,#fff 50%,#819FF7 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+     color:#fff;
+}
+
+button:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:linear-gradient(45deg, #819FF7 50%, transparent 50%);
+    z-index: -1;
+}
+
+button,button:after{
+    background-size:300%;
+    background-position: 100%;
+    transition:1s, font-size .2s;
+
+    
+
+}
+
+button:hover, button:hover:after{
+    background-position: 0;
+    font-size:45px;   
+    color:#819FF7;
+}
+
+.button2 {
+    padding:8px 16px;
+    width: 300px;
+    height: 330px;
+    font-size: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    border:4px solid #FFAAAA;
+    background: linear-gradient(45deg,#fff 50%,#FFAAAA 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+     color:#fff;
+}
+
+.button2:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:linear-gradient(45deg, #FFAAAA 50%, transparent 50%);
+    z-index: -1;
+}
+
+.button2,.button2:after{
+    background-size:300%;
+    background-position: 100%;
+    transition:1s, font-size .2s;
+
+    
+
+}
+
+.button2:hover, .button2:hover:after{
+    background-position: 0;
+    font-size:45px;   
+    color:#FFAAAA;
+}
+

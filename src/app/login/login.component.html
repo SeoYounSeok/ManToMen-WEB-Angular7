@@ -1,0 +1,19 @@
+
+<div class="login-page">
+  <div class="form">
+ <!--   <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">아직 회원이 아니신가요? <a routerLink="/register">회원가입</a></p>
+    </form>
+  -->  
+  <form (submit)="onLoginSubmit($event)" class="login-form">
+      <input type="text" placeholder="아이디를 입력하세요" id="userID" required/>
+      <input type="password" placeholder="비밀번호를 입력하세요" id="userPassword" required/>
+      <button type="submit" >로그인</button>
+      <p class="message">아직 회원이 아니신가요? <a routerLink="/register">회원가입</a></p>
+    </form>
+  </div>
+</div>

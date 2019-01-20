@@ -1,0 +1,38 @@
+<!-- Shift + Alt + F 자동포맷 -->
+<!-- 값을 가져오도록 하는 것입니다.-->
+<div class="contents">
+  <div *ngFor="let class of informations let i = index">
+    <p style="text-align: left; font-size: 14px; color:gray"><u>{{class.ClassCategory}}</u></p>
+    <img [src]="class.ClassPicture" class="img-responsive" alt="Image" width="500" height="300">
+    <br>
+    <h3>{{class.ClassName}}</h3><br>
+    <!-- ClassCurrentPeople 은 입력해주지 않았고, Mongodb 에서 가져오는 값. 되는지 확인! -->
+    <h4>튜터 정보</h4><br>
+    <pre>
+      <h5>{{class.ClassTutorIntro}}</h5>
+    </pre>
+    <br><br>
+    <h4>수업 소개</h4><br>
+    <pre>
+      <h5>{{class.ClassIntro}}</h5>
+    </pre>
+    <br><br>
+    <h4>요약</h4><br>
+    <p> <span style="color:#FFAAAA; font-weight: bold; ">장소: &nbsp;</span><span>{{class.ClassPlace}}</span></p>
+
+    <p> <span style="color:#FFAAAA; font-weight: bold; ">수업 시간: &nbsp;</span><span>{{class.ClassTime}}</span>
+      <span style="margin-left:30px; color:#FFAAAA; font-weight: bold;">수업 요일: &nbsp;</span><span>{{class.ClassWeek}}</span></p>&nbsp;&nbsp;&nbsp;
+
+    <p> <span style="color:#FFAAAA; font-weight: bold; ">수업 횟수: &nbsp;</span><span>{{class.ClassNumberOfTime}}</span>
+      <span style="margin-left:30px; color:#FFAAAA; font-weight: bold;">회당 수업시간&nbsp;</span><span>{{class.ClassHour}}</span></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <p> <span style="color:#FFAAAA; font-weight: bold; ">시작 날짜: &nbsp;</span><span>{{class.ClassFirstTime}}</span>
+      <span style="margin-left:30px; color:#FFAAAA; font-weight: bold;">모집 인원: &nbsp;</span><span>{{class.ClassTotalPeople}}</span></p>&nbsp;&nbsp;&nbsp;
+
+
+    <p> <span style="color:#FFAAAA; font-weight: bold; ">수강료: &nbsp;</span><span>{{class.ClassPrice}}</span></p>
+    <br><br><br><br>
+    <button class="btn_want" (click)="onApply(class.ClassName,class.ClassScore)">신청 하기</button>
+    <button class="button2" routerLink="/reviewmain">리뷰 보기</button>
+  </div>
+</div>

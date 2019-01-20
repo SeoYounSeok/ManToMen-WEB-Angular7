@@ -1,0 +1,265 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    user-select: none;
+}
+
+.item_active {
+    padding: 25px;
+    background: url("../../../assets/images/tutor_register_top.jpg ");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+body {
+    background: #e7e7e7;
+    height: 100%;
+}
+
+h4 {
+    color: #ff3d6e;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    /*margin: 1rem;*/
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #ff889b;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #ff889b;
+}
+
+input[type=date] {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+#uploadForm{
+    text-align: center;
+    font-size: 12px;
+}
+#uploadForm input[type=file]{
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;  
+    width: 200px;
+}
+
+#uploadForm input[type=submit]{
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;  
+    width: 220px;
+    background: #ff889b;
+    color: #ffffff;
+}
+.container {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-bottom: 200px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 35px;
+    max-width: 1000px;
+}
+.container input[type=submit] {
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.sub_cen{
+    width: 100%;
+    text-align: center;
+}
+
+[type=checkbox] {
+    display: none;
+}
+
+.check_day {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #ccc;
+}
+
+[type=checkbox]:checked+label {
+    cursor: pointer;
+    color: #FFAAAA;
+}
+
+* {
+    box-sizing: border-box
+}
+
+ul {
+    list-style: none;
+}
+
+.step-box {
+    padding: 0 10px 10px 10px;
+    border: 1px solid #ddd;
+    background: #fff
+}
+
+.step-state {
+    padding: 10px 0 15px;
+    margin-top: 15px;
+    background: #ffffff
+}
+
+.step-state ul:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.step-state ul li {
+    float: left;
+    position: relative;
+    width: 20%;
+    /* 5개 진행바를 5등분 */
+    padding-top: 50px;
+    /* 진행바 영역 확보 */
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 12px;
+    color: #666
+}
+
+.step-state ul li:first-child {
+    font-size: 13px
+}
+
+
+.step-state ul li p:after {
+    position: absolute;
+
+    width: 41px;
+    height: 24px;
+    margin-right: -20px;
+    background: url(https://t1.daumcdn.net/cfile/tistory/241D463E58AFAEAB16) no-repeat 0 0;
+    background-size: auto 24px;
+    background-position: -58px 0;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -.5px;
+}
+
+.step-state ul li:first-child p {
+    padding-top: 6px
+}
+
+.step-state ul li span {
+    display: block;
+    margin-top: 2px;
+    font-weight: normal;
+    color: #898989;
+    font-size: 12px
+}
+
+
+.step-state ul li:before {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #ddd;
+    content: ''
+}
+
+
+.step-state ul li:nth-child(1):before {
+    left: 50%
+}
+
+
+.step-state ul li:nth-child(5):before {
+    right: 50%
+}
+
+
+.step-state ul li:after {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    background: url(https://t1.daumcdn.net/cfile/tistory/241D463E58AFAEAB16) no-repeat 0 0;
+    background-size: auto 24px;
+    background-position: 0 0;
+    content: ''
+}
+
+.step-state.step1 ul li:nth-child(1):before, .step-state.step2 ul li:nth-child(-n+2):before, .step-state.step2-ing ul li:nth-child(-n+2):before, .step-state.step3 ul li:nth-child(-n+3):before, .step-state.step3-ing ul li:nth-child(-n+3):before, .step-state.step4 ul li:nth-child(-n+4):before, .step-state.step4-ing ul li:nth-child(-n+4):before, .step-state.step5 ul li:nth-child(-n+5):before {
+    background: #ff889b
+}
+
+
+.step-state.step1 ul li:nth-child(1):after, .step-state.step2 ul li:nth-child(-n+2):after, .step-state.step2-ing ul li:nth-child(-n+2):after, .step-state.step3 ul li:nth-child(-n+3):after, .step-state.step3-ing ul li:nth-child(-n+3):after, .step-state.step4 ul li:nth-child(-n+4):after, .step-state.step4-ing ul li:nth-child(-n+4):after, .step-state.step5 ul li:nth-child(-n+5):after {
+    background-position: -20px 0
+}
+
+
+.step-state ul li p:before {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    right: 0;
+    height: 3px;
+    content: '';
+}
+
+.step-state.step2 ul li:nth-child(2) p:before, .step-state.step3 ul li:nth-child(3) p:before, .step-state.step4 ul li:nth-child(4) p:before {
+    background: #ddd
+}
+
+
+.step-state.step1 ul li:nth-child(1) p:after, .step-state.step2-ing ul li:nth-child(2) p:after, .step-state.step3-ing ul li:nth-child(3) p:after, .step-state.step4-ing ul li:nth-child(4) p:after {
+    content: '작성중';
+}
+
+
+.step-state.step2 ul li:nth-child(2) p:after, .step-state.step3 ul li:nth-child(3) p:after, .step-state.step4 ul li:nth-child(4) p:after, .step-state.step5 ul li:nth-child(5) p:after {
+    content: '작성중';
+    right: 50%
+}
