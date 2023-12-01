@@ -39,7 +39,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## - 도움말 채팅 페이지  (  Dialogflow 사용 -> 입력 대화 )
 
 ![image](https://user-images.githubusercontent.com/43161245/76684569-4ccad700-6650-11ea-9c43-8d85d8a72721.png)
-
-## - 기타 페이지 ( 기타 웹 페이지 ( 관리자 페이지 , 채팅 기능 등 ) + 앱(1) + 서버(1) ) + 자세한 정보 
-
-- [ManToMen Server + ManToMen APP] : https://github.com/SeoYounSeok/ManToMen
